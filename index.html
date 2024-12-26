@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmployeeTaskTracker</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <h1 style="text-align:center;color: blueviolet;">Employee Task Tracker</h1>
+    <hr><br>
+    <div style="background-color: rgb(207, 234, 150);">
+        <form action="submit" style="text-align: center;color: rgb(15, 15, 80);">
+            <label for="text">Employee Name:</label>
+            <input type="text" id="text" name="text" placeholder="Enter your name" required/>
+            <br><br>
+    
+            <label for="text" >Task Title:</label>
+            <input type="text" id="text" name="text" required>
+            <br><br>
+    
+            <label for="message">Task Description:</label>
+            <textarea id="message" name="message" cols="20" placeholder="About task" required></textarea>
+            <br><br>
+    
+            <label for="date">Due Date:</label>
+            <input type="date" id="date" name="date" required>
+            <br><br>
+    
+            <button type="submit" style="color: rgb(229, 241, 229);background-color: green;">Assign Task</button>
+        </form>
+    
+        <br>
+    </div>
+    <br><br>
+    <table border="1" cellpadding="5" cellspacing="0" width="100%" >
+        <!-- <thead> -->
+        <tr>
+        <th>Employee Name</th>
+        <th colspan="2">Task Details</th>
+        <th>Due Date</th>
+
+        </tr>
+        <!-- </thead> -->
+        <tr>
+            <th></th>
+            <th >Task Title</th>
+            <th>Task Description</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td rowspan="2">Yuvasree</td>
+            <td>Design Website</td>
+            <td>Creating a employee task tracker website</td>
+            <td>2024-12-27</td>
+        </tr>
+        <tr>
+            <td>Fix Bugs</td>
+            <td>Resolve UI issues in login</td>
+            <td>2024-12-31</td>
+          </tr>
+    </table>
+</body>
+</html>
