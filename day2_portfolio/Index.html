@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuvasree Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(53, 32, 73);
+            background-image: url('grey.webp');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #9B7DA9;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 10;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: rgb(56, 10, 60);
+        }
+        .project-block {
+            width: 100%;
+            height: auto;
+            background-image: url('project.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .project-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        .project-block h3, .project-block a {
+            position: relative;
+            z-index: 2;
+        }
+        .project-block h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .project-block a {
+            color: #89d311;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .project-block a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+        .whatsapp-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 20px;
+            color: rgb(22, 98, 31);
+            background-color: #25D366;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .whatsapp-button:hover {
+            background-color: #20b358;
+        }
+        .linkedin-button {
+            display: inline-flex;
+            padding: 10px 20px;
+            font-size: 20px;
+            color: darkblue;
+            background-color: rgb(217, 242, 245);
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .linkedin-button:hover {
+            background-color: white;
+        }
+        
+        .centered-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            text-align: center;
+        }
+        .centered-image img {
+            max-width: 100%; /* Ensures the image fits within the container */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(231, 210, 228); font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><b>
+    <!-- <h1 style="color:rgb(53, 32, 73); text-align: center;">Personal Portfolio</h1> -->
+    <br>
+    <h2 style="color:rgb(247, 247, 248);font-size: 400%;">Welcome to My Portfolio</h2>
+
+    <header>
+        <nav>
+            <ul>
+                <li style="font-size: larger;"><a href="#about">About me</a></li>
+                <li style="font-size: larger;"><a href="#edu">Education</a></li>
+                <li style="font-size: larger;"><a href="#skill">Skills</a></li>
+                <li style="font-size: larger;"><a href="#project">Projects</a></li>
+                <li style="font-size: larger;"><a href="#call">Contact</a></li>
+                <li style="font-size: larger;"><a href="#Hobby">Hobbies</a></li>
+                <li style="font-size: larger;"><a href="#PW">Personal Weblinks</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+
+    <div style="background-color: #9B7DA9">
+        <section style="background-color: #9B7DA9;" id="about">
+            <img src="coatPhoto.jpg" alt="Profile Picture" style="width:150px; height:150px; border-radius:50%; display:block; margin: 0 auto;">
+            <h1 style="color:white; text-align: center;font-size: 250%;"><strong><b>Yuvasree Madheswaran</b></strong></h1>
+            <p style="text-align: justify;"> I am an engineering student passionate about solving real-world problems through innovation and technology. I am driven by curiosity and enjoy working on projects that challenge me to think critically and learn continuously. My goal is to contribute to impactful solutions that make a difference.</p>
+        </section>
+    <br>
+    </div>
+    <section id="edu">
+        <h3 style="color:white; font-size: 250%; text-align: center;">Education</h3>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr style="background-color: #f0a0a0;">
+                <th style="border: 1px solid black; padding: 8px;background-color: #E5D0D3;">SSLC</th>
+                <th style="border: 1px solid black; padding: 8px;background-color: #D7B8D1;">HSLC</th>
+                <th style="border: 1px solid black; padding: 8px;background-color: #B8D8E6;">B.TECH</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; background-color: #E5D0D3;">Govt.Girls.Hr Sec School</td>
+                <td style="border: 1px solid black; padding: 8px; background-color: #D7B8D1;">JKKN Matric Hr Sec School</td>
+                <td style="border: 1px solid black; padding: 8px; background-color: #B8D8E6;">K.S.Rangasamy College Of Technology</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; background-color: #E5D0D3;">Percentage: 92%</td>
+                <td style="border: 1px solid black; padding: 8px; background-color: #D7B8D1;">Percentage: 91.94%</td>
+                <td style="border: 1px solid black; padding: 8px; background-color: #B8D8E6;">CGPA: 8.68</td>
+            </tr>
+        </table>
+    </section>
+    <br>
+    
+    <div>
+        <h3 style="color:white; font-size: 250%; text-align: center;">Skills</h3>
+        <section style="background-color: #C8A6C2;" id="skill">
+            <ul >
+                <li>C<progress value="80" max="100"></progress></li>
+                <li>Java <progress value="70" max="100" ></progress></li>
+                <li>Python <progress value="50" max="100"></progress></li>
+                <li>MySQL <progress value="50" max="100"></progress></li>
+                <li>Machine Learning<progress value="80" max="100"></progress></li>
+            </ul>
+        </section>
+        <br><br>
+    </div>
+    <br><br>
+
+    <div>
+        <section id="project" class="project-block">
+            <h3>My Project</h3>
+            <a href="https://harmonyplay.netlify.app/" target="_blank">Music Player Website - Click to Listen Music</a>
+        </section>
+    </div>
+    <br>
+
+    <div style="text-align: center;">
+        <section id="call">
+            <h1 style="color:white; font-size: 250%;text-align: center;">Contact Me</h1>
+            <a href="https://wa.me/919994755900" class="whatsapp-button" target="_blank">
+                <b>Chat with me on WhatsApp</b>
+            </a>
+        </section><br>
+        <section id="PW">
+            <a href="https://www.linkedin.com/in/yuvasree-madheswaran-bb9228280/" class="linkedin-button" target="_blank"> <b>LinkedIn</b> </a>
+        </section>
+    </div><br>
+    <div class="centered-image">
+        <section id="hobby">
+            <h1 style="text-align: center;color:white;font-size: 250%;">Hobbies</h1>
+            <img src="singing.jpg" alt="Singing">
+            <!-- <img src="harmonica.jpg" alt="Harmonica Playing"> -->
+        </section>
+
+    </div>
+    <section id="PW">
+        <footer style="background-color: #9B7DA9; color: rgb(56, 10, 60); text-align: center; padding: 10px 0; position: relative; bottom: 0; width: 100%;">
+            <p>© 2024 Yuvasree Madheswaran | All rights reserved.</p>
+            <a href="https://www.linkedin.com/in/yuvasree-madheswaran-bb9228280/" style="color:rgb(56, 10, 60);">LinkedIn</a> |
+            <a href="https://wa.me/919994755900" style="color: rgb(56, 10, 60)">WhatsApp</a> |
+            <a href="https://github.com/Yuvasree-01" style="color: rgb(56, 10, 60)">GitHub</a> |
+            <a href="mailto:yuvasreem11@gmail.com" style="color: rgb(56, 10, 60)">EMail</a>
+        </footer>
+    </section>
+
+</body>
+</html>

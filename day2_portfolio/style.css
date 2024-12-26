@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .block {
+        width: 90%; /* Adjust block size */
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.block:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+a:hover {
+    color: rgb(9, 23, 103);
+    text-decoration: underline;
+}
