@@ -4,7 +4,7 @@
         align-items: center;
     }
     .block {
-        width: 90%; /* Adjust block size */
+        width: 90%; 
     }
     nav ul {
         flex-direction: column;
