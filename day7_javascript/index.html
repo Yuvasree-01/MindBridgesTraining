@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-size: larger;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button.submit {
+            background-color: green;
+            color: white;
+        }
+        button.reset {
+            background-color: red;
+            color: white;
+        }
+        div.task {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;background-color: antiquewhite;">JavaScript Tasks</h1>
+
+    <!-- Task 1 -->
+    <div class="task">
+        <h3>1. Even or Odd Number Checker</h3>
+        <form id="evenOddForm">
+            <input type="number" id="numberInput" placeholder="Enter a number" required>
+            <br><br>
+            <button type="submit" class="submit">Submit</button>
+            <button type="reset" class="reset">Reset</button>
+        </form>
+        <p id="evenOddResult"></p>
+    </div>
+
+    <!-- Task 2 -->
+    <div class="task">
+        <h3>2. Print Numbers from 1 to 10</h3>
+        <button onclick="printNumbers()" class="submit">Show Numbers</button>
+        <p id="numberOutput"></p>
+    </div>
+
+    <!-- Task 3 -->
+    <div class="task">
+        <h3>3. Print Multiples of a Number</h3>
+        <input type="number" id="multipleInput" placeholder="Enter a number">
+        <button onclick="printMultiples()" class="submit">Show Multiples</button>
+        <p id="multipleOutput"></p>
+    </div>
+
+    <!-- Task 4 -->
+    <div class="task">
+        <h3>4. Check if a Number is Prime</h3>
+        <input type="number" id="primeInput" placeholder="Enter a number">
+        <button onclick="checkPrime()" class="submit">Check Prime</button>
+        <p id="primeResult"></p>
+    </div>
+
+    <!-- Task 5 -->
+    <div class="task">
+        <h3>5. Calculate the Sum of Numbers from 1 to 100</h3>
+        <button onclick="calculateSum()" class="submit">Calculate Sum</button>
+        <p id="sumResult"></p>
+    </div>
+
+    <!-- Task 6 -->
+    <div class="task">
+        <h3>6. Find the Largest Number in an Array</h3>
+        <input type="text" id="arrayInput" placeholder="Enter numbers separated by commas">
+        <button onclick="findLargest()" class="submit">Find Largest</button>
+        <p id="largestResult"></p>
+    </div>
+
+    <!-- Task 7 -->
+    <div class="task">
+        <h3>7. Count the Vowels in a String</h3>
+        <input type="text" id="stringInput" placeholder="Enter a string">
+        <button onclick="countVowels()" class="submit">Count Vowels</button>
+        <p id="vowelResult"></p>
+    </div>
+
+    <!-- Task 8 -->
+    <div class="task">
+        <h3>8. Print a Star Pattern</h3>
+        <button onclick="printPattern()" class="submit">Show Pattern</button>
+        <p id="patternOutput" style="white-space: pre;"></p>
+    </div>
+
+    <!-- Task 9 -->
+    <div class="task">
+        <h3>9. FizzBuzz</h3>
+        <button onclick="fizzBuzz()" class="submit">Show FizzBuzz</button>
+        <p id="fizzBuzzOutput"></p>
+    </div>
+
+    <!-- Task 10 -->
+    <div class="task">
+        <h3>10. Reverse a String</h3>
+        <input type="text" id="reverseInput" placeholder="Enter a string">
+        <button onclick="reverseString()" class="submit">Reverse String</button>
+        <p id="reverseResult"></p>
+    </div>
+
+    <script>
+        // Task 1
+        document.getElementById("evenOddForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const num = parseInt(document.getElementById("numberInput").value);
+            const result = (num % 2 === 0) ? `${num} is an even number.` : `${num} is an odd number.`;
+            document.getElementById("evenOddResult").innerText = result;
+        });
+
+        // Task 2
+        function printNumbers() {
+            let output = "";
+            for (let i = 1; i <= 10; i++) {
+                output += i + "<br>";
+            }
+            document.getElementById("numberOutput").innerHTML = output;
+        }
+
+        // Task 3
+        function printMultiples() {
+            const num = parseInt(document.getElementById("multipleInput").value);
+            let output = "";
+            for (let i = 1; i <= 10; i++) {
+                output += num * i + "<br>";
+            }
+            document.getElementById("multipleOutput").innerHTML = output;
+        }
+
+        // Task 4
+        function checkPrime() {
+            const num = parseInt(document.getElementById("primeInput").value);
+            if (num < 2) {
+                document.getElementById("primeResult").innerText = `${num} is not a prime number.`;
+                return;
+            }
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    document.getElementById("primeResult").innerText = `${num} is not a prime number.`;
+                    return;
+                }
+            }
+            document.getElementById("primeResult").innerText = `${num} is a prime number.`;
+        }
+
+        // Task 5
+        function calculateSum() {
+            let sum = 0;
+            for (let i = 1; i <= 100; i++) {
+                sum += i;
+            }
+            document.getElementById("sumResult").innerText = `The sum of numbers from 1 to 100 is ${sum}.`;
+        }
+
+        // Task 6
+        function findLargest() {
+            const array = document.getElementById("arrayInput").value.split(",").map(Number);
+            const largest = Math.max(...array);
+            document.getElementById("largestResult").innerText = `The largest number is ${largest}.`;
+        }
+
+        // Task 7
+        function countVowels() {
+            const str = document.getElementById("stringInput").value.toLowerCase();
+            const vowels = str.match(/[aeiou]/g);
+            document.getElementById("vowelResult").innerText = `The number of vowels is ${vowels ? vowels.length : 0}.`;
+        }
+
+        // Task 8
+        function printPattern() {
+            let pattern = "";
+            for (let i = 1; i <= 5; i++) {
+                pattern += "*".repeat(i) + "\n";
+            }
+            document.getElementById("patternOutput").innerText = pattern;
+        }
+
+        // Task 9
+        function fizzBuzz() {
+            let output = "";
+            for (let i = 1; i <= 50; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    output += "FizzBuzz<br>";
+                } else if (i % 3 === 0) {
+                    output += "Fizz<br>";
+                } else if (i % 5 === 0) {
+                    output += "Buzz<br>";
+                } else {
+                    output += i + "<br>";
+                }
+            }
+            document.getElementById("fizzBuzzOutput").innerHTML = output;
+        }
+
+        // Task 10
+        function reverseString() {
+            const str = document.getElementById("reverseInput").value;
+            const reversed = str.split("").reverse().join("");
+            document.getElementById("reverseResult").innerText = `Reversed string: ${reversed}`;
+        }
+    </script>
+</body>
+</html>
