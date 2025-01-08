@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Functions with HTML Interaction</title>
+  <style>
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        margin: 20px;
+        background-color:rgb(247, 247, 201);
+    
+    }
+    .output {
+        font-family:'Courier New', Courier, monospace;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    input{
+        padding: 10px 0px 10px 20px;
+        width: 300px;
+        background-color: beige;
+    }
+    button{
+        padding: 10px;
+        color:#fff ;
+        background-color: rgb(12, 70, 120);
+        width: 300px;
+    }
+    button:hover{
+        background-color: rgb(225, 68, 68);
+        cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+    <h1>JavaScript Functions with HTML Interaction</h1>
+
+    <label for="inputText">Enter your sentence:</label>
+    <input type="text" id="inputText" placeholder="Enter text here"><br><br>
+
+    <button data-action="largestWord">Find Largest Word</button><br><br>
+    <button data-action="replaceNames">Replace Names by 'CHANGED'</button><br><br>
+    <button data-action="replaceEvenWords">Replace Even Words by 'EVEN'</button><br><br>
+    <button data-action="removeDuplicates">Remove Duplicate Characters</button><br><br>
+
+    <div class="output" id="output"></div>
+
+  <script src="script.js">
+    
+  </script>
+
+</body>
+</html>
