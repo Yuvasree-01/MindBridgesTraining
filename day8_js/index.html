@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day8 Task</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        button{
+            border-radius: 30px;
+            background-color: lightgreen;
+            padding: 10px 15px 10px 15px;
+        }
+        button:hover{
+            background-color: rgb(249, 249, 130);
+            cursor: pointer;
+        }
+        h1{
+            color:darkblue;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h2{
+            color:brown;
+            text-decoration:solid;
+        }
+        input{
+            padding: 10px;
+            border-color: rgb(3, 51, 41);
+            border-radius: 10px;
+            background-color: lavender;
+        }
+        ul{
+            text-decoration-line:  none;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Day8 Operators Task</h1>
+    <!-- Operator Tasks -->
+
+    <!-- Welcome Alert -->
+    <div>
+        <h2>Welcome Alert</h2>
+        <button onclick="welcomeAlert()">Show Welcome Alert</button>
+    </div>
+
+    <!-- User Confirmation -->
+    <div>
+        <h2>User Confirmation</h2>
+        <button onclick="userConfirmation()">Ask to Continue</button>
+        <p id="confirmationResult">Result: </p>
+    </div>
+
+    <!-- Prompt for Age -->
+    <div>
+        <h2>Prompt for Age</h2>
+        <button onclick="promptForAge()">Check Eligibility</button>
+        <p id="ageResult">Result: </p>
+    </div>
+    <hr>
+    <div >
+        <h2>Basic Math Operation</h2>
+        <input type="number" id="n1" placeholder="Number 1">
+        <input type="number" id="n2" placeholder="Number 2">
+        <button onclick="mathOperation()" >Answer</button>
+        <ul >
+            <p>Sum:</p><li id="sum"></li>
+            <p>Difference:</p><li id="diff"></li>
+            <p>Product:</p><li id="prod"></li>
+            <p>Division:</p><li id="division"></li>
+        </ul>
+    </div>
+    <hr>
+    <!-- Logical Condition -->
+     <div>
+        <h2>Positive or Negative</h2>
+        <input type="number" id="num" placeholder="Enter a number">
+        <button onclick="logicalOperation()">Show Answer</button>
+        <p id="logical">Result: </p>
+     </div>
+
+    <hr>
+     <!-- Ternary Operator -->
+     <div>
+        <h2>Ternary Operator</h2>
+        <input type="number" id="val" placeholder="Enter a number">
+        <button onclick="ternary()">Show Negative or Positive</button>
+        <p id="P/N">Result:</p>
+        
+     </div>
+     <hr>
+
+     <!-- Check Odd or Even -->
+    <div>
+        <h2>Even or Odd Number Checker</h2>
+        <input type="number" id="numberInput" placeholder="Enter a number" required>
+        <button type="submit" onclick="EvenOdd()">Check</button>
+        <p id="evenOddResult">Result:</p>
+    </div>
+
+    <hr>
+     <!-- Grade System -->
+     <div>
+        <h2>Grade System</h2>
+        <input type="number" id="mark" placeholder="Enter a number" required>
+        <button type="submit" onclick="Grade()">Check</button>
+        <p id="ExamResult">Result:</p>
+    </div>
+
+    <hr>
+    <!-- Multiplication Tables Upto 10-->
+    <div >
+        <h2>Multiplication Tables Upto 10</h2>
+        <input type="number" id="Multiply" placeholder="Enter a number">
+        <button onclick="printMultiples()" >Show Multiples</button>
+        <p id="tables">Result:</p>
+    </div>
+
+    
+    <hr>
+    <!-- Reverse a String -->
+    <div>
+        <h2>Reverse a String</h2>
+        <input type="text" id="inputString" placeholder="Enter a string">
+        <button type="submit" onclick="reverseString()">Reverse</button>
+        <p id="reversedResult">Result: </p>
+    </div>
+    <hr>
+    <!-- Count Vowels -->
+    <div>
+        <h2>Count Vowels</h2>
+        <input type="text" id="str" placeholder="Enter a string">
+        <button type="submit" onclick="countVowels()">Count Vowels</button>
+        <p id="vowelResult">Result: </p>
+    </div>
+    <hr>
+
+    <!-- Check Palindrome -->
+    <div>
+        <h2>Check Palindrome</h2>
+        <input type="text" id="String" placeholder="Enter a string">
+        <button type="submit" onclick="checkPalindrome()">Check Palindrome</button>
+        <p id="palindromeResult">Result: </p>
+    </div>
+    <hr>
+    <!--Count Digits in a Number -->
+    <div >
+        <h2>Count Digits in a Number</h2>
+        <input type="number" id="count" placeholder="Enter a number">
+        <button onclick="DigitCount()" >Count</button>
+        <p id="digitCountResult">Result:</p>
+    </div>
+    <hr>
+    <!-- Extract Initials -->
+    <div>
+        <h2>Extract Initials</h2>
+        <input type="text" id="fullName" placeholder="Enter full name">
+        <button onclick="extractInitials()">Get Initials</button>
+        <p id="initialsResult">Result: </p>
+    </div>
+
+    <hr>
+    <!-- Replace Words -->
+    <div>
+        <h2>Replace Words</h2>
+        <input type="text" id="sentenceInput" placeholder="Enter a sentence">
+        <input type="text" id="wordToReplace" placeholder="Word to replace">
+        <input type="text" id="newWord" placeholder="New word">
+        <button onclick="replaceWord()">Replace Word</button>
+        <p id="replaceResult">Result: </p>
+    </div>
+    <hr>
+    <!-- Split Sentence into Words -->
+    <div>
+        <h2>Split Sentence into Words</h2>
+        <input type="text" id="split" placeholder="Enter a sentence">
+        <button onclick="splitSentence()">Split Sentence</button>
+        <p id="splitResult">Result: </p>
+    </div>
+    <hr>
+    <!-- Remove Spaces -->
+    <div>
+        <h2>Remove Spaces</h2>
+        <input type="text" id="stringInput" placeholder="Enter a string">
+        <button onclick="removeSpaces()">Remove Spaces</button>
+        <p id="removeSpacesResult">Result: </p>
+    </div>
+    <hr>
+    <!-- Find Character Frequency -->
+    <div>
+        <h2>Find Character Frequency</h2>
+        <input type="text" id="inputStr" placeholder="Enter a string">
+        <input type="text" id="inputChar" placeholder="Enter a character">
+        <button onclick="findCharacterFrequency()">Find Frequency</button>
+        <p id="charFrequencyResult">Result: </p>
+    </div>
+    <hr>
+    <!-- Simple Body mass index Calculator -->
+    <div>
+        <h2>Body Mass Index(BMI) Calculator</h2>
+        <button onclick="calculateBMI()">Calculate BMI</button>
+    </div>
+<br><br><br>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
