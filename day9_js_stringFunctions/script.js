@@ -13,19 +13,19 @@ function findLargestWord(str) {
   // names with "CHANGED" 
   function replaceNamesWithChanged(sentence) {
     let words = sentence.split(' ');
-    let nameMap = {};
-    let result = [];
+    let Map = {};
+    let res = [];
 
     for (let i = 0; i < words.length; i++) {
-      if (nameMap[words[i]]) {
-        result.push('CHANGED');
+      if (Map[words[i]]) {
+        res.push('CHANGED');
       } else {
-        result.push(words[i]);
-        nameMap[words[i]] = true;
+        res.push(words[i]);
+        Map[words[i]] = true;
       }
     }
 
-    return result.join(' ');
+    return res.join(' ');
   }
 
   // replace even-indexed words with "EVEN"
@@ -41,15 +41,15 @@ function findLargestWord(str) {
 
   // remove duplicate characters from a string
   function removeDuplicateChars(str) {
-    let result = '';
-    let seen = {};
+    let res = '';
+    let dup = {};
     for (let i = 0; i < str.length; i++) {
-      if (!seen[str[i]]) {
-        result += str[i];
-        seen[str[i]] = true;
+      if (!dup[str[i]]) {
+        res += str[i];
+        dup[str[i]] = true;
       }
     }
-    return result;
+    return res;
   }
 
   document.querySelectorAll('button').forEach(button => {
