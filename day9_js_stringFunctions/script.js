@@ -1,82 +1,63 @@
-//  largest word in a string
-function findLargestWord(str) {
-    let words = str.split(' ');
-    let largestWord = words[0];
-    for (let i = 1; i < words.length; i++) {
-      if (words[i].length > largestWord.length) {
-        largestWord = words[i];
-      }
+// Largest word in a string
+function findLargestWord() {
+  let inputText = document.getElementById('inputText1').value;
+  let words = inputText.split(' ');
+  let largestWord = words[0];
+  
+  for (let i = 1; i < words.length; i++) {
+    if (words[i].length > largestWord.length) {
+      largestWord = words[i];
     }
-    return largestWord;
   }
+  
+  document.getElementById('output1').innerText = 'Largest word: ' + largestWord;
+}
 
-  // names with "CHANGED" 
-  function replaceNamesWithChanged(sentence) {
-    let words = sentence.split(' ');
-    let nameMap = {};
-    let result = [];
-
-    for (let i = 0; i < words.length; i++) {
-      if (nameMap[words[i]]) {
-        result.push('CHANGED');
-      } else {
-        result.push(words[i]);
-        nameMap[words[i]] = true;
-      }
+// Replace names with "CHANGED"
+function replaceNamesWithChanged() {
+  let inputText = document.getElementById('inputText2').value;
+  let words = inputText.split(' ');
+  let Map = {};
+  let result = [];
+  
+  for (let i = 0; i < words.length; i++) {
+    if (Map[words[i]]) {
+      result.push('CHANGED');
+    } else {
+      result.push(words[i]);
+      Map[words[i]] = true;
     }
-
-    return result.join(' ');
   }
+  
+  document.getElementById('output2').innerText = 'Changed sentence: ' + result.join(' ');
+}
 
-  // replace even-indexed words with "EVEN"
-  function replaceEvenWords(sentence) {
-    let words = sentence.split(' ');
-    for (let i = 0; i < words.length; i++) {
-      if (i % 2 === 0) {
-        words[i] = 'EVEN';
-      }
+// Replace even-indexed words with "EVEN"
+function replaceEvenWords() {
+  let inputText = document.getElementById('inputText3').value;
+  let words = inputText.split(' ');
+  
+  for (let i = 0; i < words.length; i++) {
+    if (i % 2 === 0) {
+      words[i] = 'EVEN';
     }
-    return words.join(' ');
   }
+  
+  document.getElementById('output3').innerText = 'Even sentence: ' + words.join(' ');
+}
 
-  // remove duplicate characters from a string
-  function removeDuplicateChars(str) {
-    let result = '';
-    let seen = {};
-    for (let i = 0; i < str.length; i++) {
-      if (!seen[str[i]]) {
-        result += str[i];
-        seen[str[i]] = true;
-      }
+// Remove duplicate characters from a string
+function removeDuplicateChars() {
+  let inputText = document.getElementById('inputText4').value;
+  let res = '';
+  let dup = {};
+  
+  for (let i = 0; i < inputText.length; i++) {
+    if (!dup[inputText[i]]) {
+      res += inputText[i];
+      dup[inputText[i]] = true;
     }
-    return result;
   }
-
-  document.querySelectorAll('button').forEach(button => {
-    button.addEventListener('click', function() {
-      let inputText = document.getElementById('inputText').value;
-      let action = this.getAttribute('data-action');
-      let result;
-
-      switch (action) {
-        case 'largestWord':
-          result = findLargestWord(inputText);
-          document.getElementById('output').innerText = 'Largest word: ' + result;
-          break;
-        case 'replaceNames':
-          result = replaceNamesWithChanged(inputText);
-          document.getElementById('output').innerText = 'Modified sentence: ' + result;
-          break;
-        case 'replaceEvenWords':
-          result = replaceEvenWords(inputText);
-          document.getElementById('output').innerText = 'Modified sentence: ' + result;
-          break;
-        case 'removeDuplicates':
-          result = removeDuplicateChars(inputText);
-          document.getElementById('output').innerText = 'Modified string: ' + result;
-          break;
-        default:
-          document.getElementById('output').innerText = 'Invalid action';
-      }
-    });
-  });
+  
+  document.getElementById('output4').innerText = 'Duplicate Removed: ' + res;
+}

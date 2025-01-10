@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Functions with HTML Interaction</title>
+  <title>JavaScript String Functions</title>
   <style>
     body{
         font-family: 'Courier New', Courier, monospace;
@@ -35,17 +35,24 @@
 </head>
 <body>
 
-    <h1>JavaScript Functions with HTML Interaction</h1>
+    <h1>JavaScript String Functions</h1>
 
-    <label for="inputText">Enter your sentence:</label>
-    <input type="text" id="inputText" placeholder="Enter text here"><br><br>
+    <input type="text" id="inputText1" placeholder="Enter text here">
+    <button onclick="findLargestWord()">Find Largest Word</button>
+    <p id="output1">Output1:</p>
 
-    <button data-action="largestWord">Find Largest Word</button><br><br>
-    <button data-action="replaceNames">Replace Names by 'CHANGED'</button><br><br>
-    <button data-action="replaceEvenWords">Replace Even Words by 'EVEN'</button><br><br>
-    <button data-action="removeDuplicates">Remove Duplicate Characters</button><br><br>
+    <input type="text" id="inputText2" placeholder="Enter text here">
+    <button onclick="replaceNamesWithChanged()">Replace Names</button>
+    <p id="output2">Output2:</p>
 
-    <div class="output" id="output"></div>
+    <input type="text" id="inputText3" placeholder="Enter text here">
+    <button onclick="replaceEvenWords()">Replace Even Words</button>
+    <p id="output3">Output3:</p>
+
+    <input type="text" id="inputText4" placeholder="Enter text here">
+    <button onclick="removeDuplicateChars()">Remove Duplicates</button>
+    <p id="output4">Output4:</p>
+
 
   <script src="script.js">
     
