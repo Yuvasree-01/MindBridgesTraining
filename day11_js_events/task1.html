@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+    <form >
+        <input type="text" id="task" name="task">
+        <button id="task1">Submit</button>
+    </form>
+    
+
+    <script>
+        
+        let btn=document.getElementById("task1");
+        btn.addEventListener('click',(event)=>{
+            
+            let str=document.getElementById("task").value;
+            console.log(str);
+            // let string="abc";
+            var sum=0;
+            for(let i=0;i<str.length;i++){
+                console.log(i);
+                let count=str.charCodeAt(i);
+                sum=sum+count;
+            }
+            console.log(sum);
+            alert(sum+" is the ASCII value for the string "+"'"+str+"'");
+        })
+
+    </script>
+</body>
+</html>

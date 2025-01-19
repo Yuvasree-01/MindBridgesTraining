@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+<body>
+    <h1>This page can't be able to save</h1>
+    <script>
+        document.addEventListener('keydown',(event)=>{
+            if(event.ctrlKey && event.key=='s'){
+                event.preventDefault();
+                console.log(event);
+            }
+        })
+        
+    </script>
+</body>
+</html>
