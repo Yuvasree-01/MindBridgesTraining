@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 p-10 m-5 w-1/2 flex justify-start">
+    <div class="bg-purple-200 p-5 text-sm  border-purple-900 border-2">
+        <form action="">
+            <h1 style="text-align: center;" class="text-xl font-semibold">Student Form</h1>
+            <div class="flex justify-evenly m-5 font-semibold">
+                <div>
+                    <label for="firstname">FirstName:</label>
+                    <input id="firstname" class="transform hover:scale-110 motion-reduce:transform-none border-2 hover:border-purple-700 outline-none focus:border-purple-900 border-purple-400 p-2 mt-2 mr-2" type="text" required>
+                    <span id="firstname-error" class="error-message"></span>
+                </div>
+                <div>
+                    <label for="midname">MiddleName:</label>
+                    <input id="midname" class="transform hover:scale-110 motion-reduce:transform-none border-2 hover:border-purple-700 outline-none focus:border-purple-900 border-purple-400 p-2 mt-2 mr-2" type="text">
+                </div>
+                <div>
+                    <label for="lastname">LastName:</label>
+                    <input id="lastname" class="transform hover:scale-110 motion-reduce:transform-none border-2 hover:border-purple-700 outline-none focus:border-purple-900 border-purple-400 p-2 mt-2 mr-2" type="text" required>
+                    <span id="lastname-error" class="error-message"></span>
+                </div>
+            </div>
+            <div class="m-5 font-semibold">
+                <label for="age">Age:</label><br>
+                <input id="age" class="transform hover:scale-110 motion-reduce:transform-none border-2 hover:border-purple-700 outline-none focus:border-purple-900 border-purple-400 p-2 mt-2" type="number" required>
+                <span id="age-error" class="error-message"></span>
+            </div>
+            <div class="m-5 font-semibold">
+                <label for="phn">Mobile Number:</label><br>
+                <input id="phn" class="transform hover:scale-110 motion-reduce:transform-none border-2 hover:border-purple-700 outline-none focus:border-purple-900 border-purple-400 p-2 mt-2" type="tel" required>
+                <span id="phn-error" class="error-message"></span>
+                <p class="text-xs font-light">Eg:+00-0000000000</p>
+            </div>
+            <div class="m-5 flex">
+                <label for="gender" class="font-semibold">Gender:</label>
+                <div class="flex text-sm font-normal" required>
+                    <div class="mr-3 ml-5 transform hover:scale-110 motion-reduce:transform-none">
+                        <input id="male" name="gender" value="Male" type="radio" class="transform hover:scale-150 motion-reduce:transform-none">
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="mr-3 transform hover:scale-110 motion-reduce:transform-none">
+                        <input id="female" name="gender" value="Female" type="radio" class="transform hover:scale-150 motion-reduce:transform-none">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="transform hover:scale-110 motion-reduce:transform-none">
+                        <input id="other" name="gender" value="Other" type="radio" class="transform hover:scale-150 motion-reduce:transform-none">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+                <span id="gender-error" class="error-message"></span>
+            </div>
+            <div class="m-5 flex">
+                <label for="subject" class="font-semibold">Subject:</label>
+                <div class="ml-5" required>
+                    <div>
+                        <input id="html" type="checkbox" value="HTML" class="transform hover:scale-150 motion-reduce:transform-none checked:bg-blue-600 checked:border-transparent">
+                        <label for="html">HTML</label>
+                    </div>
+                    <div class="mt-2">
+                        <input id="css" type="checkbox" value="CSS" class="transform hover:scale-150 motion-reduce:transform-none checked:bg-blue-600 checked:border-transparent">
+                        <label for="css">CSS</label>
+                    </div>
+                    <div class="mt-2">
+                        <input id="js" type="checkbox" value="JavaScript" class="transform hover:scale-150 motion-reduce:transform-none checked:bg-blue-600 checked:border-transparent">
+                        <label for="js">JavaScript</label>
+                    </div>
+                    <div class="mt-2">
+                        <input id="react" type="checkbox" value="React" class="transform hover:scale-150 motion-reduce:transform-none checked:bg-pink-400 checked:border-transparent">
+                        <label for="react">React</label>
+                    </div>
+                </div>
+                <span id="subject-error" class="error-message"></span>
+            </div>
+            <div>
+                <div class="m-5 font-semibold">
+                    <label for="dob">Date Of Birth:</label><br>
+                    <input id="dob" class="transform hover:scale-110 motion-reduce:transform-none border-2 hover:border-purple-700 outline-none focus:border-purple-900 border-purple-400 p-2 mt-2" type="date" required>
+                    <span id="dob-error" class="error-message"></span>
+                </div>
+                <div class="m-5 font-semibold">
+                    <label for="location">Location:</label><br>
+                    <select id="location" class="transform hover:scale-110 motion-reduce:transform-none border-2 hover:border-purple-700 outline-none focus:border-purple-900 border-purple-400 p-2 mt-2" required>
+                        <option value="">-Select-</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Coimbatore">Coimbatore</option>
+                    </select>
+                    <span id="location-error" class="error-message"></span>
+                </div>
+            </div>
+            <div class="flex justify-end">
+                <div class="m-5">
+                    <button class="transform hover:scale-110 motion-reduce:transform-none bg-red-500 border border-red-700 p-3 rounded" type="reset">Reset</button>
+                </div>
+                <div class="m-5">
+                    <button class="transform hover:scale-110 motion-reduce:transform-none bg-green-500 border border-green-700 p-3 font-semibold hover:bg-green-600 rounded" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <table>
+            
+            <tbody>
+              <!-- Rows will be added here -->
+            </tbody>
+          </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
